@@ -1,0 +1,3 @@
+[submodule "ClinicManagmentAPIs"]
+	path = ClinicManagmentAPIs
+	url = https://github.com/ahmedsameh2071996/ClinicManagmentAPIs.git
