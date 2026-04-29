@@ -10,6 +10,7 @@ namespace ClinicManagmentAPIs.Data
             {
             }
         public DbSet<UserAccount> User { get; set; }
+        public DbSet<Patient> Patients { get; set; }
       /*  public object User { get; internal set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
