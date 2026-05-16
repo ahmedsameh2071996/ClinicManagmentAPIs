@@ -3,38 +3,43 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace ClinicManagmentAPIs.Model;
 
-[Table("Patient")]
-public class Patient
-{
-    [Key]
-    [Column("patient_id")]
+    [Table("Patient")]
+    public class Patient
+    {
+        [Key]
+        [Column("patient_id")]
     public int PatientId { get; set; }
 
-    [Column("mrn")]
+        [Required]
+        [Column("mrn")]
     public string Mrn { get; set; } = string.Empty;
 
-    [Column("first_name")]
+        [Required]
+        [Column("first_name")]
     public string FirstName { get; set; } = string.Empty;
 
-    [Column("last_name")]
+        [Required]
+        [Column("last_name")]
     public string LastName { get; set; } = string.Empty;
 
-    [Column("date_of_birth")]
+        [Required]
+        [Column("date_of_birth")]
     public DateOnly DateOfBirth { get; set; }
 
-    [Column("sex")]
+        [Required]
+        [Column("sex")]
     public string Sex { get; set; } = string.Empty;
 
-    [Column("phone")]
+        [Column("phone")]
     public string? Phone { get; set; }
 
-    [Column("email")]
+        [Column("email")]
     public string? Email { get; set; }
 
-    [Column("address")]
+        [Column("address")]
     public string? Address { get; set; }
 
-    [Column("created_at")]
+        [Column("created_at")]
     public DateTime CreatedAt { get; set; }
 
     public ICollection<PatientRegistration> Registrations { get; set; } = [];
